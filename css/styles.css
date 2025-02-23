@@ -28,6 +28,7 @@ body {
 
 a {
     text-decoration: none;
+    background-color: #242424;
 }
 
 .container {
@@ -53,13 +54,13 @@ nav {
 }
 
 .nav-list a {
-    color: var(--white);
+    color: var(--secondary);
     padding: 15px;
 }
 
 .nav-list a:hover {
     background-color: var(--secondary);
-    color: black;
+    color: var(--primary);
 }
 
 .logo {
@@ -89,13 +90,13 @@ nav {
     align-items: center;
     justify-content: center;
     margin-top: 80px;
-    color: var(--white);
+    color: var(--secondary);
 }
 
 .main-content .intro-heading {
     font-size: 50px;
     text-align: center;
-    background: rgb(43, 42, 42);
+    background: #242424c8;
 }
 
 .menu-btn {
@@ -260,6 +261,7 @@ footer .container {
 .footer-links a {
     color: var(--primary);
     padding: 10px;
+    background-color: white;
 }
 
 .footer-links a:hover {
@@ -278,7 +280,7 @@ footer .container {
 
     .nav-list {
         flex-direction: column;
-        background: gray;
+        background: #242424;
         position: absolute;
         top: 0;
         right: -900px;
@@ -295,8 +297,9 @@ footer .container {
     .nav-list li {
         text-align: left;
         width: 100%;
-        padding: 10px 30px;
+        padding: 20px 30px;
         border-bottom: 1px solid var(--white);
+        font-size: 20px;
     }
 
     #about-us .container {
