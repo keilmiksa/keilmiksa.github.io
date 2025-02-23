@@ -17,8 +17,10 @@ body {
     color: var(--primary);
 }
 
+/* Header (main) start*/
+
 #main {
-    background-image: url(../img/main.png);
+    background-image: url("../img/main.jpg");
     min-height: 70vh;
     background-position: bottom center;
     background-size: cover;
@@ -52,26 +54,33 @@ nav {
 
 .nav-list a {
     color: var(--white);
+    padding: 15px;
+}
+
+.nav-list a:hover {
+    background-color: var(--secondary);
+    color: black;
+}
+
+.logo {
+    width: 50px;
 }
 
 .btn {
     padding: 10px 20px;
-    background: transparent;
     outline: none;
     cursor: pointer;
     border-radius: 5px;
-}
-
-.btn-secondary {
-    border: 1px solid var(--white);
-    color: var(--white);
-    font-weight: bold;
-}
-
-.btn-primary {
     border: none;
     background: var(--secondary);
     color: var(--primary);
+    margin-top: 80px;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+}
+
+.btn:hover {
+    transform: scale(1.25);
 }
 
 .main-content {
@@ -85,16 +94,8 @@ nav {
 
 .main-content .intro-heading {
     font-size: 50px;
-}
-
-.main-content .main-heading {
-    font-size: 110px;
-    margin-top: -20px;
-}
-
-.main-content p {
-    max-width: 250px;
-    margin-bottom: 10px;
+    text-align: center;
+    background: rgb(43, 42, 42);
 }
 
 .menu-btn {
@@ -105,13 +106,16 @@ nav {
     width: 30px;
 }
 
+/* Header(main) end */
+/* Services start */
 .section-title h1 {
     font-size: 50px;
     text-align: center;
+    padding-bottom: 5px;
 }
 
 .section-title .line {
-    width: 150px;
+    width: 200px;
     height: 4px;
     border: 10px;
     background: var(--secondary);
@@ -122,8 +126,9 @@ nav {
     margin-top: 40px;
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 0px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .service {
@@ -131,7 +136,8 @@ nav {
 }
 
 .service img {
-    max-width: 100%;
+    width: 350px;
+    height: 470px;
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
@@ -140,8 +146,11 @@ nav {
     transform: scale(1.05);
 }
 
+/* Services end */
+/* Testimonial start */
+
 #testimonial {
-    background: #f1f2fa;
+    background: #fcefdf;
 }
 
 #testimonial .container {
@@ -166,6 +175,12 @@ nav {
     align-items: center;
 }
 
+#testimonial .profile img {
+    width: 100px;
+}
+
+/* Testimonial end */
+/* About us start */
 #about-us .container {
     display: flex;
     align-items: center;
@@ -186,10 +201,17 @@ nav {
     font-size: 30px;
 }
 
+#about-us .about-image img {
+    height: 500px;
+}
+
+/* About us end */
+/* Questions start */
+
 #questions {
     min-height: 500px;
-    background-image: url("../img/main-2.png");
-    background-position: bottom center;
+    background-image: url("../img/main-2.jpg");
+    background-position: top center;
     background-size: cover;
 }
 
@@ -205,7 +227,17 @@ nav {
 
 #questions h1 {
     font-size: 50px;
+    color: white;
 }
+
+#questions p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Questions end  */
 
 footer {
     margin-top: -60px;
@@ -223,6 +255,20 @@ footer .container {
     align-items: center;
     gap: 16px;
     list-style: none;
+}
+
+.footer-links a {
+    color: var(--primary);
+    padding: 10px;
+}
+
+.footer-links a:hover {
+    background-color: var(--secondary);
+}
+
+.footerlogo {
+    width: 70px;
+    padding: 10px;
 }
 
 @media screen and (max-width: 520px) {
@@ -246,7 +292,7 @@ footer .container {
         right: 0;
     }
 
-    .nav-list li:not(:last-child) {
+    .nav-list li {
         text-align: left;
         width: 100%;
         padding: 10px 30px;
