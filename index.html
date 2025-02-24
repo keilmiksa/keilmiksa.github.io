@@ -12,11 +12,13 @@
         <div id="main">
             <div class="container">
                 <nav>
-                    <img src="./img/logo.png" alt="" class="logo" />
+                    <a href="index.html"
+                        ><img src="./img/logo.png" alt="" class="logo"
+                    /></a>
                     <ul class="nav-list">
-                        <li><a href="#">Kezdőlap</a></li>
-                        <li><a href="#">Kapcsolat</a></li>
-                        <li><a href="#">Szolgáltatások</a></li>
+                        <li><a href="index.html">Kezdőlap</a></li>
+                        <li><a href="contanct.html">Kapcsolat</a></li>
+                        <li><a href="services.html">Szolgáltatások</a></li>
                     </ul>
                     <img src="./img/menu.svg" alt="" class="menu-btn" />
                 </nav>
@@ -25,8 +27,8 @@
                     <h1 class="intro-heading">
                         Üdvözöllek a webdesign világában
                     </h1>
-                    <button class="btn">Vágjunk bele!</button>
-                </div>
+                    <a class="intro-link" href="./services.html"><button class="btn">Vágjunk bele!</button>
+                </div></a>
             </div>
         </div>
 
@@ -38,7 +40,7 @@
                 </div>
                 <div class="services">
                     <div class="service">
-                        <img src="./img/service-1.jpg" alt="" />
+                        <a href="./services.html#bm1"><img src="./img/service-1.jpg" alt="" /></a>
                         <h3>Webfejlesztés</h3>
                         <p>
                             A webfejlesztés egy kreatív terület, amely a
@@ -51,7 +53,7 @@
                         </p>
                     </div>
                     <div class="service">
-                        <img src="./img/service-2.jpg" alt="" />
+                        <a href="./services.html#bm2"><img src="./img/service-2.jpg" alt="" /></a>
                         <h3>Grafikai tervezés</h3>
                         <p>
                             A grafikai tervezés egy olyan művészeti ág, amely a
@@ -66,7 +68,7 @@
                         </p>
                     </div>
                     <div class="service">
-                        <img src="./img/service-3.jpg" alt="" />
+                        <a href="./services.html#bm3"><img src="./img/service-3.jpg" alt="" /></a>
                         <h3>Tartalomkészítés</h3>
                         <p>
                             A tartalomkészítés folyamatában különböző formájú és
@@ -110,7 +112,11 @@
                         hogy el akarják olvasni a blogbejegyzéseit, feliratkozni
                         az e-mail hírlevelére, vagy megvásárolni, amit kínál.
                     </p>
-                    <button class="btn">Vegye fel velünk a kapcsolatot</button>
+                    <a class="contact" href="contanct.html"
+                        ><button class="btn">
+                            Vegye fel velünk a kapcsolatot
+                        </button></a
+                    >
                 </div>
 
                 <div class="about-image">
@@ -126,29 +132,33 @@
                     Keressen minke bizalommal. Munkatársaink állnak
                     rendelkezésükre a hét minden napján.
                 </p>
-                <button class="btn">Írjon nekünk!</button>
+                <a class="contact" href="contanct.html"
+                        ><button class="btn">
+                            Írjon nekünk!
+                        </button></a
             </div>
         </section>
 
         <footer>
             <div class="container">
                 <ul class="footer-links">
-                    <li><a href="#">Kezdőlap</a></li>
-                    <li><a href="#">Szolgáltatások</a></li>
-                    <li><a href="#">Kapcsolat</a></li>
+                    <li><a href="index.html">Kezdőlap</a></li>
+                        <li><a href="contanct.html">Kapcsolat</a></li>
+                        <li><a href="services.html">Szolgáltatások</a></li>
                 </ul>
-                <img src="./img/logo.png" alt="" class="footerlogo" />
+                <a href="index.html"><img src="./img/logo.png" alt="" class="footerlogo" /></a>
                 <p>Webdesign by Keil Miksa</p>
             </div>
         </footer>
 
         <script>
-            const navBtn = document.querySelector(".menu-btn");
-            const navList = document.querySelector(".nav-list");
-
-            navBtn.addEventListener("click", function () {
-                navList.classList.toggle("active");
-            });
+            document
+                .querySelector(".menu-btn")
+                .addEventListener("click", function () {
+                    document
+                        .querySelector(".nav-list")
+                        .classList.toggle("active");
+                });
         </script>
     </body>
 </html>
