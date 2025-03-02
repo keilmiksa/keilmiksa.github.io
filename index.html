@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Keil Miksa | 6. Házi</title>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    </head>
+    <body>
+        <main>
+            <header></header>
+
+            <aside>
+                <nav>
+                    <ul>
+                        <li><a href="#section1">Balaton</a></li>
+                        <li><a href="#section2">Tisza-tó</a></li>
+                        <li><a href="#section3">Szelidi-tó</a></li>
+                    </ul>
+                </nav>
+
+                <h2 class="formtitle">
+                    Kérem töltse ki a jelentkezési űrlapot!
+                </h2>
+
+                <form action="/submit" method="post">
+                    <div class="person-data">
+                        <label for="name">Név:</label><br />
+                        <input type="text" id="name" name="name" required />
+
+                        <label for="email">E-mail cím:</label><br />
+                        <input type="email" id="email" name="email" required />
+
+                        <label for="phone">Telefonszám:</label><br />
+                        <input type="tel" id="phone" name="phone" required />
+                    </div>
+
+                    <label for="lake">Melyik tó érdekli?</label><br />
+                    <select id="lake" name="lake" required>
+                        <option value="Balaton">Balaton</option>
+                        <option value="Tisza-tó">Tisza-tó</option>
+                        <option value="Szelidi-tó">Szelidi-tó</option>
+                    </select>
+
+                    <label>Milyen szállást keres?</label><br />
+                    <div class="inline">
+                        <input
+                            type="checkbox"
+                            id="hotel"
+                            name="accommodation"
+                            value="szálloda"
+                        />
+                        <label for="hotel">szálloda</label>
+                    </div>
+                    <div class="inline">
+                        <input
+                            type="checkbox"
+                            id="apartment"
+                            name="accommodation"
+                            value="apartmanház"
+                        />
+                        <label for="apartment">apartmanház</label>
+                    </div>
+                    <div class="inline">
+                        <input
+                            type="checkbox"
+                            id="camping"
+                            name="accommodation"
+                            value="kemping"
+                        />
+                        <label for="camping">kemping</label>
+                    </div>
+
+                    <label>Milyen ellátás legyen?</label><br />
+                    <div class="inline">
+                        <input
+                            type="radio"
+                            id="full-board"
+                            name="meal"
+                            value="teljes"
+                            required
+                        />
+                        <label for="full-board">teljes</label>
+                    </div>
+                    <div class="inline">
+                        <input
+                            type="radio"
+                            id="half-board"
+                            name="meal"
+                            value="fél panzió"
+                            required
+                        />
+                        <label for="half-board">fél panzió</label>
+                    </div>
+                    <div class="inline">
+                        <input
+                            type="radio"
+                            id="breakfast-only"
+                            name="meal"
+                            value="csak reggeli"
+                            required
+                        />
+                        <label for="breakfast-only">csak reggeli</label>
+                    </div>
+                    <div class="inline">
+                        <input
+                            type="radio"
+                            id="no-meal"
+                            name="meal"
+                            value="nem kérek ellátást"
+                            required
+                        />
+                        <label for="no-meal">nem kérek ellátást</label>
+                    </div>
+
+                    <label for="message">Egyéb üzenet:</label><br />
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="3"
+                        cols="50"
+                    ></textarea>
+
+                    <button type="submit">Mehet</button>
+                </form>
+            </aside>
+
+            <section id="section1">
+                <h2>Balaton</h2>
+                <p>
+                    A Balaton, Magyarország legnagyobb tava, Közép-Európa egyik
+                    legkedveltebb üdülőhelye. A "magyar tenger" néven is ismert
+                    tó körülbelül 77 kilométer hosszú, és szélessége változó, de
+                    átlagosan 7-8 kilométer. A tó vize általában sekély, nyáron
+                    kellemesen meleg, ami ideális fürdőzési lehetőséget nyújt a
+                    látogatóknak. A Balaton déli partja sekélyebb, homokos
+                    strandokkal, míg az északi partja meredekebb, ahol a festői
+                    Balaton-felvidék található. <br />
+                    <br /><img src="./img/balaton.jpg" alt="Balaton" />A Balaton
+                    környékén számos város és falu található, mint például
+                    Siófok, Balatonfüred és Tihany, mindegyik saját különleges
+                    vonzerejével és programjaival. Tihany különösen híres az
+                    apátságáról és a csodálatos panorámáról, amely a tóra
+                    nyílik. A Balaton régióban kiváló borászatok is találhatók,
+                    főként a badacsonyi borvidék híres borai miatt. Emellett a
+                    tó körül számos kerékpárút és túraútvonal található, amelyek
+                    lehetőséget adnak a természet szerelmeseinek a táj
+                    felfedezésére. <br /><br />
+
+                    A Balaton nem csak nyáron vonzó, hanem az év minden
+                    szakaszában különleges hangulattal bír. Télen, amikor a tó
+                    befagy, korcsolyázási lehetőségekkel csábítja a látogatókat.
+                    A Balaton régiója gazdag történelmi és kulturális örökséggel
+                    is büszkélkedhet, így minden évszakban érdemes felfedezni.
+                </p>
+            </section>
+
+            <section id="section2">
+                <h2>Tisza-tó</h2>
+                <p>
+                    A Tisza-tó, Magyarország második legnagyobb tava, az
+                    Alföldön, a Tisza folyó szabályozása során jött létre. A
+                    tavat mesterségesen alakították ki az 1970-es években a
+                    vízvisszatartás és az árvízvédelem érdekében. Napjainkban a
+                    Tisza-tó nem csak ökológiai szempontból jelentős, hanem
+                    népszerű turisztikai célpont is. A tó számos szigetet,
+                    félszigetet és sekély vízterületet kínál, amelyek gazdag
+                    élővilágnak adnak otthont. <br /><br /><a
+                        href="https://kepguru.hu/foto/193072/tisza-to?from=tisza+to&i=34"
+                        ><img src="./img/tisza.jpg" alt="Tisza-tó" /></a
+                    >A Tisza-tó környéke ideális hely a természetjáróknak,
+                    horgászoknak, kerékpárosoknak és vízi sportok kedvelőinek. A
+                    tó körül több mint 70 kilométeres kerékpárút húzódik, amely
+                    lehetőséget nyújt a környék felfedezésére. Ezen kívül a
+                    Tisza-tóhoz tartozik az Európa egyik legnagyobb édesvízi
+                    akváriuma, a Tisza-tavi Ökocentrum, ahol a látogatók
+                    megismerkedhetnek a helyi élővilággal. <br /><br />
+                    A tó gazdag madárvilága miatt különösen kedvelt a
+                    madármegfigyelők körében is. Tavasszal és ősszel
+                    vándormadarak sokasága pihen meg itt. A Tisza-tó és környéke
+                    változatos programokat kínál az év minden szakaszában,
+                    legyen szó nyári strandolásról, őszi túrákról vagy téli
+                    jégkorcsolyázásról. Egy látogatás a Tisza-tónál garantáltan
+                    felejthetetlen élményeket nyújt mindenkinek.
+                </p>
+            </section>
+
+            <section id="section3">
+                <h2>Szelidi-tó</h2>
+                <p>
+                    A Szelidi-tó Magyarország egyik rejtett gyöngyszeme, amely a
+                    Duna közelében, Bács-Kiskun megyében található. Ez a tó a
+                    természet szerelmeseinek igazi paradicsoma, ahol a csend és
+                    a nyugalom uralkodik. A tó kiváló lehetőséget nyújt a
+                    fürdőzésre, horgászatra és vízi sportokra, így minden
+                    korosztály számára ideális pihenőhely. A Szelidi-tó
+                    környékén több kemping, panzió és étterem található, ahol a
+                    látogatók kényelmesen eltölthetik az idejüket.<a
+                        href="https://kepguru.hu/foto/267217/szelidi-to?form=MG0AV3"
+                        ><img src="./img/szelidi.jpg" alt="Szelidi-tó"
+                    /></a>
+                    <br /><br />
+
+                    A tó partján sétálva gyönyörködhetünk a nádassal borított
+                    területekben és a változatos madárvilágban. A Szelidi-tó és
+                    környéke kiváló helyszín a kirándulásokhoz és a
+                    természetjáráshoz, ahol a látogatók felfedezhetik a környék
+                    természeti szépségeit. A tavat körülölelő erdők és rétek
+                    számos túraútvonallal várják a kalandvágyókat. <br /><br />
+                    A helyi rendezvények, mint például a nyári fesztiválok és
+                    sportesemények, további szórakozási lehetőségeket kínálnak a
+                    látogatóknak. Egy látogatás a Szelidi-tónál garantáltan
+                    feltölti az embert friss energiával és kellemes élményekkel.
+                    <br /><br />
+                    Szelidi-tó vize nyáron kellemesen meleg, ezért a fürdőzők
+                    körében is igen népszerű.
+                </p>
+            </section>
+            <footer>
+                <div class="container">
+                    <ul class="footer-links">
+                        <li><a href="index.html">Balaton</a></li>
+                        <li><a href="contanct.html">Tisza-tó</a></li>
+                        <li><a href="services.html">Szelidi-tó</a></li>
+                    </ul>
+                    <a href="index.html"
+                        ><img src="./img/logo.png" alt="" class="footerlogo"
+                    /></a>
+                    <p>Webdesign by Keil Miksa</p>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>
