@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -180,6 +184,7 @@ textarea#message {
     height: 200px;
     resize: none;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 .inline {
@@ -197,10 +202,12 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    transition: transform 0.5s ease;
 }
 
 button:hover {
     background-color: #d7b520d6;
+    transform: scale(1.075);
 }
 
 /* Tartalmi részek */
@@ -228,6 +235,11 @@ button:hover {
     width: 50%;
     border-radius: 20px;
     margin: 0 0 15px 10px;
+    transition: transform 0.5s ease;
+}
+
+#section1 img:hover {
+    transform: scale(1.05);
 }
 
 #section2 {
@@ -253,6 +265,11 @@ button:hover {
     width: 50%;
     border-radius: 20px;
     margin: 0 10px 15px 0px;
+    transition: transform 0.5s ease;
+}
+
+#section2 img:hover {
+    transform: scale(1.05);
 }
 
 #section3 {
@@ -278,6 +295,11 @@ button:hover {
     width: 50%;
     border-radius: 20px;
     margin: 15px 0px 0px 5px;
+    transition: transform 0.5s ease;
+}
+
+#section3 img:hover {
+    transform: scale(1.05);
 }
 
 /* Lábléc */
@@ -358,6 +380,7 @@ footer p {
 
     nav a {
         width: 100%;
+        padding: 15px;
     }
 
     #section1 img,
@@ -367,8 +390,21 @@ footer p {
         margin: 0 0 15px 0;
     }
 
+    #section3 img {
+        margin-top: 15px;
+    }
+
     footer .container {
         flex-direction: column;
+    }
+
+    footer li {
+        margin: 10px;
+        padding: 0;
+    }
+
+    .footer-links a {
+        padding: 0px;
     }
 
     .no-scroll {

@@ -7,9 +7,10 @@
         <link rel="stylesheet" href="./css/styles.css" />
         <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     </head>
+
     <body>
         <main>
-            <header></header>
+            <header id="section0"></header>
 
             <aside>
                 <nav>
@@ -27,17 +28,51 @@
                 <form action="/submit" method="post">
                     <div class="person-data">
                         <label for="name">Név:</label><br />
-                        <input type="text" id="name" name="name" required />
+                        <input
+                            type="text"
+                            class="szovegmezo"
+                            id="name"
+                            name="name"
+                            title="Adja meg a teljes nevét (maximum 50 karakter)."
+                            placeholder="Add meg a teljes neved"
+                            data-default="Add meg a teljes neved!"
+                            maxlength="50"
+                            required
+                        />
 
                         <label for="email">E-mail cím:</label><br />
-                        <input type="email" id="email" name="email" required />
+                        <input
+                            type="email"
+                            class="szovegmezo"
+                            id="email"
+                            name="email"
+                            title="Adja meg az e-mail címét (maximum 75 karakter)."
+                            placeholder="Add meg az e-mail címed!"
+                            data-default="Add meg az e-mail címed!"
+                            maxlength="75"
+                            required
+                        />
 
                         <label for="phone">Telefonszám:</label><br />
-                        <input type="tel" id="phone" name="phone" required />
+                        <input
+                            placeholder="Add meg a telefonszámodat"
+                            type="tel"
+                            class="szovegmezo"
+                            id="phone"
+                            name="phone"
+                            title="Adja meg a telefonszámát (maximum 12 karakter)."
+                            maxlength="12"
+                            required
+                        />
                     </div>
 
                     <label for="lake">Melyik tó érdekli?</label><br />
-                    <select id="lake" name="lake" required>
+                    <select
+                        id="lake"
+                        name="lake"
+                        title="Válassza ki melyik tó nyerte el e tetszését"
+                        required
+                    >
                         <option value="Balaton">Balaton</option>
                         <option value="Tisza-tó">Tisza-tó</option>
                         <option value="Szelidi-tó">Szelidi-tó</option>
@@ -46,6 +81,7 @@
                     <label>Milyen szállást keres?</label><br />
                     <div class="inline">
                         <input
+                            title="Válasszon akár többet is."
                             type="checkbox"
                             id="hotel"
                             name="accommodation"
@@ -55,6 +91,7 @@
                     </div>
                     <div class="inline">
                         <input
+                            title="Válasszon akár többet is."
                             type="checkbox"
                             id="apartment"
                             name="accommodation"
@@ -64,6 +101,7 @@
                     </div>
                     <div class="inline">
                         <input
+                            title="Válasszon akár többet is."
                             type="checkbox"
                             id="camping"
                             name="accommodation"
@@ -75,6 +113,7 @@
                     <label>Milyen ellátás legyen?</label><br />
                     <div class="inline">
                         <input
+                            title="Válasszon egyet."
                             type="radio"
                             id="full-board"
                             name="meal"
@@ -85,6 +124,7 @@
                     </div>
                     <div class="inline">
                         <input
+                            title="Válasszon egyet."
                             type="radio"
                             id="half-board"
                             name="meal"
@@ -95,6 +135,7 @@
                     </div>
                     <div class="inline">
                         <input
+                            title="Válasszon egyet."
                             type="radio"
                             id="breakfast-only"
                             name="meal"
@@ -105,6 +146,7 @@
                     </div>
                     <div class="inline">
                         <input
+                            title="Válasszon egyet."
                             type="radio"
                             id="no-meal"
                             name="meal"
@@ -116,10 +158,12 @@
 
                     <label for="message">Egyéb üzenet:</label><br />
                     <textarea
+                        title="Írjon üzenetet egyéb kéréséről"
                         id="message"
                         name="message"
                         rows="3"
                         cols="50"
+                        placeholder="Ide írd az üzenetet"
                     ></textarea>
 
                     <button type="submit">Mehet</button>
@@ -137,16 +181,17 @@
                     látogatóknak. A Balaton déli partja sekélyebb, homokos
                     strandokkal, míg az északi partja meredekebb, ahol a festői
                     Balaton-felvidék található. <br />
-                    <br /><img src="./img/balaton.jpg" alt="Balaton" />A Balaton
-                    környékén számos város és falu található, mint például
-                    Siófok, Balatonfüred és Tihany, mindegyik saját különleges
-                    vonzerejével és programjaival. Tihany különösen híres az
-                    apátságáról és a csodálatos panorámáról, amely a tóra
-                    nyílik. A Balaton régióban kiváló borászatok is találhatók,
-                    főként a badacsonyi borvidék híres borai miatt. Emellett a
-                    tó körül számos kerékpárút és túraútvonal található, amelyek
-                    lehetőséget adnak a természet szerelmeseinek a táj
-                    felfedezésére. <br /><br />
+                    <br /><a href="./img/balaton.jpg" target="_blank"
+                        ><img src="./img/balaton.jpg" alt="Balaton" /></a
+                    >A Balaton környékén számos város és falu található, mint
+                    például Siófok, Balatonfüred és Tihany, mindegyik saját
+                    különleges vonzerejével és programjaival. Tihany különösen
+                    híres az apátságáról és a csodálatos panorámáról, amely a
+                    tóra nyílik. A Balaton régióban kiváló borászatok is
+                    találhatók, főként a badacsonyi borvidék híres borai miatt.
+                    Emellett a tó körül számos kerékpárút és túraútvonal
+                    található, amelyek lehetőséget adnak a természet
+                    szerelmeseinek a táj felfedezésére. <br /><br />
 
                     A Balaton nem csak nyáron vonzó, hanem az év minden
                     szakaszában különleges hangulattal bír. Télen, amikor a tó
@@ -168,6 +213,7 @@
                     félszigetet és sekély vízterületet kínál, amelyek gazdag
                     élővilágnak adnak otthont. <br /><br /><a
                         href="https://kepguru.hu/foto/193072/tisza-to?from=tisza+to&i=34"
+                        target="_blank"
                         ><img src="./img/tisza.jpg" alt="Tisza-tó" /></a
                     >A Tisza-tó környéke ideális hely a természetjáróknak,
                     horgászoknak, kerékpárosoknak és vízi sportok kedvelőinek. A
@@ -198,6 +244,7 @@
                     környékén több kemping, panzió és étterem található, ahol a
                     látogatók kényelmesen eltölthetik az idejüket.<a
                         href="https://kepguru.hu/foto/267217/szelidi-to?form=MG0AV3"
+                        target="_blank"
                         ><img src="./img/szelidi.jpg" alt="Szelidi-tó"
                     /></a>
                     <br /><br />
@@ -220,11 +267,11 @@
             <footer>
                 <div class="container">
                     <ul class="footer-links">
-                        <li><a href="index.html">Balaton</a></li>
-                        <li><a href="contanct.html">Tisza-tó</a></li>
-                        <li><a href="services.html">Szelidi-tó</a></li>
+                        <li><a href="#section1">Balaton</a></li>
+                        <li><a href="#section2">Tisza-tó</a></li>
+                        <li><a href="#section3">Szelidi-tó</a></li>
                     </ul>
-                    <a href="index.html"
+                    <a href="#section0"
                         ><img src="./img/logo.png" alt="" class="footerlogo"
                     /></a>
                     <p>Webdesign by Keil Miksa</p>
@@ -232,4 +279,33 @@
             </footer>
         </main>
     </body>
+    <script>
+        document.querySelectorAll(".szovegmezo").forEach(function (inputField) {
+            const defaultValue = inputField.getAttribute("data-default");
+
+            inputField.addEventListener("focus", function () {
+                if (inputField.value === defaultValue) {
+                    inputField.value = "";
+                }
+            });
+
+            inputField.addEventListener("blur", function () {
+                if (inputField.value === "") {
+                    inputField.value = defaultValue;
+                }
+            });
+        });
+
+        function clearText(element) {
+            if (element.value === "Itt írhatja meg az üzenetét...") {
+                element.value = "";
+            }
+        }
+
+        function restoreText(element) {
+            if (element.value === "") {
+                element.value = "Itt írhatja meg az üzenetét...";
+            }
+        }
+    </script>
 </html>
