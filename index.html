@@ -1,311 +1,119 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Keil Miksa | 6. Házi</title>
+        <title>Adventure</title>
         <link rel="stylesheet" href="./css/styles.css" />
-        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     </head>
-
     <body>
-        <main>
-            <header id="section0"></header>
+        <nav class="navbar">
+            <h1 class="logo">ADVENTURE</h1>
+            <ul class="nav-links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Tours</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <img src="./img/menu-btn.png" alt="" class="menu-btn" />
+        </nav>
 
-            <aside>
-                <nav>
-                    <ul>
-                        <li><a href="#section1">Balaton</a></li>
-                        <li><a href="#section2">Tisza-tó</a></li>
-                        <li><a href="#section3">Szelidi-tó</a></li>
-                    </ul>
-                </nav>
+        <header>
+            <div class="header-content">
+                <h2>Explore The Colorful world</h2>
+                <div class="line"></div>
+                <h1>A WOUNDERFUL GIFT</h1>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </header>
 
-                <h2 class="formtitle">
-                    Kérem töltse ki a jelentkezési űrlapot!
-                </h2>
-
-                <form action="/submit" method="post">
-                    <div class="person-data">
-                        <label for="name">Név:</label><br />
-                        <input
-                            type="text"
-                            class="szovegmezo"
-                            id="name"
-                            name="name"
-                            title="Adja meg a teljes nevét (maximum 50 karakter)."
-                            placeholder="Add meg a teljes neved"
-                            data-default="Add meg a teljes neved!"
-                            maxlength="50"
-                            required
-                        />
-
-                        <label for="email">E-mail cím:</label><br />
-                        <input
-                            type="email"
-                            class="szovegmezo"
-                            id="email"
-                            name="email"
-                            title="Adja meg az e-mail címét (maximum 75 karakter)."
-                            placeholder="Add meg az e-mail címed!"
-                            data-default="Add meg az e-mail címed!"
-                            maxlength="75"
-                            required
-                        />
-
-                        <label for="phone">Telefonszám:</label><br />
-                        <input
-                            placeholder="Add meg a telefonszámodat"
-                            type="tel"
-                            class="szovegmezo"
-                            id="phone"
-                            name="phone"
-                            title="Adja meg a telefonszámát (maximum 12 karakter)."
-                            maxlength="12"
-                            required
-                        />
-                    </div>
-
-                    <label for="lake">Melyik tó érdekli?</label><br />
-                    <select
-                        id="lake"
-                        name="lake"
-                        title="Válassza ki melyik tó nyerte el e tetszését"
-                        required
-                    >
-                        <option value="Balaton">Balaton</option>
-                        <option value="Tisza-tó">Tisza-tó</option>
-                        <option value="Szelidi-tó">Szelidi-tó</option>
-                    </select>
-
-                    <label>Milyen szállást keres?</label><br />
-                    <div class="inline">
-                        <input
-                            title="Válasszon akár többet is."
-                            type="checkbox"
-                            id="hotel"
-                            name="accommodation"
-                            value="szálloda"
-                        />
-                        <label for="hotel">szálloda</label>
-                    </div>
-                    <div class="inline">
-                        <input
-                            title="Válasszon akár többet is."
-                            type="checkbox"
-                            id="apartment"
-                            name="accommodation"
-                            value="apartmanház"
-                        />
-                        <label for="apartment">apartmanház</label>
-                    </div>
-                    <div class="inline">
-                        <input
-                            title="Válasszon akár többet is."
-                            type="checkbox"
-                            id="camping"
-                            name="accommodation"
-                            value="kemping"
-                        />
-                        <label for="camping">kemping</label>
-                    </div>
-
-                    <label>Milyen ellátás legyen?</label><br />
-                    <div class="inline">
-                        <input
-                            title="Válasszon egyet."
-                            type="radio"
-                            id="full-board"
-                            name="meal"
-                            value="teljes"
-                            required
-                        />
-                        <label for="full-board">teljes</label>
-                    </div>
-                    <div class="inline">
-                        <input
-                            title="Válasszon egyet."
-                            type="radio"
-                            id="half-board"
-                            name="meal"
-                            value="fél panzió"
-                            required
-                        />
-                        <label for="half-board">fél panzió</label>
-                    </div>
-                    <div class="inline">
-                        <input
-                            title="Válasszon egyet."
-                            type="radio"
-                            id="breakfast-only"
-                            name="meal"
-                            value="csak reggeli"
-                            required
-                        />
-                        <label for="breakfast-only">csak reggeli</label>
-                    </div>
-                    <div class="inline">
-                        <input
-                            title="Válasszon egyet."
-                            type="radio"
-                            id="no-meal"
-                            name="meal"
-                            value="nem kérek ellátást"
-                            required
-                        />
-                        <label for="no-meal">nem kérek ellátást</label>
-                    </div>
-
-                    <label for="message">Egyéb üzenet:</label><br />
-                    <textarea
-                        title="Írjon üzenetet egyéb kéréséről"
-                        id="message"
-                        name="message"
-                        rows="3"
-                        cols="50"
-                        placeholder="Ide írd az üzenetet"
-                    ></textarea>
-
-                    <button type="submit">Mehet</button>
-                </form>
-            </aside>
-
-            <section id="section1">
-                <h2>Balaton</h2>
-                <p>
-                    A Balaton, Magyarország legnagyobb tava, Közép-Európa egyik
-                    legkedveltebb üdülőhelye. A "magyar tenger" néven is ismert
-                    tó körülbelül 77 kilométer hosszú, és szélessége változó, de
-                    átlagosan 7-8 kilométer. A tó vize általában sekély, nyáron
-                    kellemesen meleg, ami ideális fürdőzési lehetőséget nyújt a
-                    látogatóknak. A Balaton déli partja sekélyebb, homokos
-                    strandokkal, míg az északi partja meredekebb, ahol a festői
-                    Balaton-felvidék található. <br />
-                    <br /><a href="./img/balaton.jpg" target="_blank"
-                        ><img src="./img/balaton.jpg" alt="Balaton" /></a
-                    >A Balaton környékén számos város és falu található, mint
-                    például Siófok, Balatonfüred és Tihany, mindegyik saját
-                    különleges vonzerejével és programjaival. Tihany különösen
-                    híres az apátságáról és a csodálatos panorámáról, amely a
-                    tóra nyílik. A Balaton régióban kiváló borászatok is
-                    találhatók, főként a badacsonyi borvidék híres borai miatt.
-                    Emellett a tó körül számos kerékpárút és túraútvonal
-                    található, amelyek lehetőséget adnak a természet
-                    szerelmeseinek a táj felfedezésére. <br /><br />
-
-                    A Balaton nem csak nyáron vonzó, hanem az év minden
-                    szakaszában különleges hangulattal bír. Télen, amikor a tó
-                    befagy, korcsolyázási lehetőségekkel csábítja a látogatókat.
-                    A Balaton régiója gazdag történelmi és kulturális örökséggel
-                    is büszkélkedhet, így minden évszakban érdemes felfedezni.
-                </p>
-            </section>
-
-            <section id="section2">
-                <h2>Tisza-tó</h2>
-                <p>
-                    A Tisza-tó, Magyarország második legnagyobb tava, az
-                    Alföldön, a Tisza folyó szabályozása során jött létre. A
-                    tavat mesterségesen alakították ki az 1970-es években a
-                    vízvisszatartás és az árvízvédelem érdekében. Napjainkban a
-                    Tisza-tó nem csak ökológiai szempontból jelentős, hanem
-                    népszerű turisztikai célpont is. A tó számos szigetet,
-                    félszigetet és sekély vízterületet kínál, amelyek gazdag
-                    élővilágnak adnak otthont. <br /><br /><a
-                        href="https://kepguru.hu/foto/193072/tisza-to?from=tisza+to&i=34"
-                        target="_blank"
-                        ><img src="./img/tisza.jpg" alt="Tisza-tó" /></a
-                    >A Tisza-tó környéke ideális hely a természetjáróknak,
-                    horgászoknak, kerékpárosoknak és vízi sportok kedvelőinek. A
-                    tó körül több mint 70 kilométeres kerékpárút húzódik, amely
-                    lehetőséget nyújt a környék felfedezésére. Ezen kívül a
-                    Tisza-tóhoz tartozik az Európa egyik legnagyobb édesvízi
-                    akváriuma, a Tisza-tavi Ökocentrum, ahol a látogatók
-                    megismerkedhetnek a helyi élővilággal. <br /><br />
-                    A tó gazdag madárvilága miatt különösen kedvelt a
-                    madármegfigyelők körében is. Tavasszal és ősszel
-                    vándormadarak sokasága pihen meg itt. A Tisza-tó és környéke
-                    változatos programokat kínál az év minden szakaszában,
-                    legyen szó nyári strandolásról, őszi túrákról vagy téli
-                    jégkorcsolyázásról. Egy látogatás a Tisza-tónál garantáltan
-                    felejthetetlen élményeket nyújt mindenkinek.
-                </p>
-            </section>
-
-            <section id="section3">
-                <h2>Szelidi-tó</h2>
-                <p>
-                    A Szelidi-tó Magyarország egyik rejtett gyöngyszeme, amely a
-                    Duna közelében, Bács-Kiskun megyében található. Ez a tó a
-                    természet szerelmeseinek igazi paradicsoma, ahol a csend és
-                    a nyugalom uralkodik. A tó kiváló lehetőséget nyújt a
-                    fürdőzésre, horgászatra és vízi sportokra, így minden
-                    korosztály számára ideális pihenőhely. A Szelidi-tó
-                    környékén több kemping, panzió és étterem található, ahol a
-                    látogatók kényelmesen eltölthetik az idejüket.<a
-                        href="https://kepguru.hu/foto/267217/szelidi-to?form=MG0AV3"
-                        target="_blank"
-                        ><img src="./img/szelidi.jpg" alt="Szelidi-tó"
-                    /></a>
-                    <br /><br />
-
-                    A tó partján sétálva gyönyörködhetünk a nádassal borított
-                    területekben és a változatos madárvilágban. A Szelidi-tó és
-                    környéke kiváló helyszín a kirándulásokhoz és a
-                    természetjáráshoz, ahol a látogatók felfedezhetik a környék
-                    természeti szépségeit. A tavat körülölelő erdők és rétek
-                    számos túraútvonallal várják a kalandvágyókat. <br /><br />
-                    A helyi rendezvények, mint például a nyári fesztiválok és
-                    sportesemények, további szórakozási lehetőségeket kínálnak a
-                    látogatóknak. Egy látogatás a Szelidi-tónál garantáltan
-                    feltölti az embert friss energiával és kellemes élményekkel.
-                    <br /><br />
-                    Szelidi-tó vize nyáron kellemesen meleg, ezért a fürdőzők
-                    körében is igen népszerű.
-                </p>
-            </section>
-            <footer>
-                <div class="container">
-                    <ul class="footer-links">
-                        <li><a href="#section1">Balaton</a></li>
-                        <li><a href="#section2">Tisza-tó</a></li>
-                        <li><a href="#section3">Szelidi-tó</a></li>
-                    </ul>
-                    <a href="#section0"
-                        ><img src="./img/logo.png" alt="" class="footerlogo"
-                    /></a>
-                    <p>Webdesign by Keil Miksa</p>
+        <section class="events">
+            <div class="title">
+                <h1>Upcoming Events</h1>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <img src="./img/img1.png" alt="" />
+                    <h4>Event Camp Trek</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nam atque, laudantium iure distinctio libero, sit,
+                        eveniet repellat facilis veniam dolor vel eum
+                        perspiciatis minima repellendus! Voluptates quam sed
+                        reiciendis repellat.
+                    </p>
+                    <a href="#" class="ctn">Learn more</a>
                 </div>
-            </footer>
-        </main>
+                <div class="col">
+                    <img src="./img/img2.png" alt="" />
+                    <h4>Walking holidays</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nam atque, laudantium iure distinctio libero, sit,
+                        eveniet repellat facilis veniam dolor vel eum
+                        perspiciatis minima repellendus! Voluptates quam sed
+                        reiciendis repellat.
+                    </p>
+                    <a href="#" class="ctn">Learn more</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore">
+            <div class="explore-content">
+                <h1>EXPLORE THE WORLD</h1>
+                <div class="line"></div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quidem unde blanditiis sunt aperiam sit, assumenda maiores,
+                    vero ipsa asperiores sequi voluptas necessitatibus ipsam
+                    quod accusamus dolorum dignissimos impedit tempore! Animi!
+                </p>
+                <a href="#" class="ctn">Learn More</a>
+            </div>
+        </section>
+
+        <section class="tours">
+            <div class="row">
+                <div class="content-col">
+                    <h1>UPCOMING TOURS & DESTINATIONS</h1>
+                    <div class="line"></div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Autem voluptates omnis ducimus ipsam tempora
+                        reprehenderit, nihil culpa necessitatibus quibusdam
+                        dolorem sint. Numquam asperiores, alias veniam quisquam
+                        dicta quibusdam enim consequatur!
+                    </p>
+                </div>
+                <div class="image-col">
+                    <div class="image-gallery">
+                        <img src="./img/img3.png" alt="" />
+                        <img src="./img/img4.png" alt="" />
+                        <img src="./img/img5.png" alt="" />
+                        <img src="./img/img6.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+                dolorum nihil labore aliquam iusto harum aliquid natus numquam
+                autem aspernatur!
+            </p>
+        </footer>
+
+        <script>
+            const menuBtn = document.querySelector(".menu-btn");
+            const navlinks = document.querySelector(".nav-links");
+
+            menuBtn.addEventListener("click", () => {
+                navlinks.classList.toggle("mobile-menu");
+            });
+        </script>
     </body>
-    <script>
-        document.querySelectorAll(".szovegmezo").forEach(function (inputField) {
-            const defaultValue = inputField.getAttribute("data-default");
-
-            inputField.addEventListener("focus", function () {
-                if (inputField.value === defaultValue) {
-                    inputField.value = "";
-                }
-            });
-
-            inputField.addEventListener("blur", function () {
-                if (inputField.value === "") {
-                    inputField.value = defaultValue;
-                }
-            });
-        });
-
-        function clearText(element) {
-            if (element.value === "Itt írhatja meg az üzenetét...") {
-                element.value = "";
-            }
-        }
-
-        function restoreText(element) {
-            if (element.value === "") {
-                element.value = "Itt írhatja meg az üzenetét...";
-            }
-        }
-    </script>
 </html>
