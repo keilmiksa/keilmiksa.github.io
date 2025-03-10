@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+
+    <header>
+        <div class="header-content">
+          <h1>Lépjen velünk kapcsolatba!</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+      <h1 class="logo"><a href="index.html">AI</a></h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Kezdőlap</a></li>
+        <li "><a href="apply.html">Ai alkalmazása</a></li>
+        <li class="active"><a href="contact.html">Kapcsolat</a></li>
+      </ul>
+      <img src="./img/menu-btn.png" alt="" class="menu-btn" />
+    </nav>
+
+   
+
+    <footer class="footer">
+      <p>Az információk forrása a Wikiédia.</p>
+      <p>A képeket a Microsoft Designer generálta.</p>
+    </footer>
+
+    <script>
+      const menuBtn = document.querySelector(".menu-btn");
+      const navlinks = document.querySelector(".nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        navlinks.classList.toggle("mobile-menu");
+      });
+    </script>
+  </body>
+</html>
